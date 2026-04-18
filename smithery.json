@@ -1,0 +1,65 @@
+{
+  "name": "mercadolibre-mcp-read",
+  "displayName": "Mercado Libre MCP (read-only)",
+  "description": "MCP server read-only para Mercado Libre. 7 tools de consulta y análisis de seller operations — productos, órdenes, preguntas, métricas, reputación, competidores, categorías. Sin write-back (no modifica la tienda).",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "TRAID Agency",
+  "homepage": "https://github.com/MarcosNahuel/mercadolibre-mcp-read",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarcosNahuel/mercadolibre-mcp-read"
+  },
+  "runtime": {
+    "type": "node",
+    "version": ">=18"
+  },
+  "install": {
+    "command": "npm",
+    "args": ["install", "-g", "@traid/mercadolibre-mcp-read"]
+  },
+  "start": {
+    "command": "mercadolibre-mcp-read"
+  },
+  "config": {
+    "env": [
+      {
+        "name": "ML_ACCESS_TOKEN",
+        "required": false,
+        "description": "Access token directo (modo simple, requiere renovación externa)"
+      },
+      {
+        "name": "ML_CLIENT_ID",
+        "required": false,
+        "description": "Client ID de tu aplicación ML (modo auto-refresh)"
+      },
+      {
+        "name": "ML_CLIENT_SECRET",
+        "required": false,
+        "description": "Client secret (modo auto-refresh)"
+      },
+      {
+        "name": "ML_REFRESH_TOKEN",
+        "required": false,
+        "description": "Refresh token obtenido en el OAuth flow (modo auto-refresh)"
+      },
+      {
+        "name": "ML_SITE_ID",
+        "required": false,
+        "default": "MLA",
+        "description": "Site ID (MLA=Argentina, MLM=México, MLB=Brasil, etc)"
+      }
+    ]
+  },
+  "tools": [
+    "list_products",
+    "get_orders",
+    "list_questions",
+    "get_item_metrics",
+    "get_reputation",
+    "search_competitors",
+    "get_categories"
+  ],
+  "categories": ["ecommerce", "latam", "analytics"],
+  "keywords": ["mercadolibre", "ecommerce", "seller", "analytics", "read-only", "latam"]
+}
