@@ -1,5 +1,5 @@
 {
-  "name": "@traid/mercadolibre-mcp-read",
+  "name": "@nahuelalbornoz/mercadolibre-mcp-read",
   "version": "1.0.0",
   "description": "MCP server read-only para Mercado Libre — 7 tools de análisis y consulta de seller operations (productos, órdenes, preguntas, métricas, reputación, competencia, categorías).",
   "license": "MIT",
